@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn và định dạng form</title>
+</head>
+<body>
+    <form name="anime" >
+        Họ và tên: <input type="text" name="ho_ten" size="30" maxlength="20" placeholder=" Nhập tên" required pattern="[A-Z]"/><br>
+        Mật khẩu: <input type="text" name="mat_khau" size="30" maxlength="50" placeholder="Đưa mật khẩu đây" required pattern="[A-Z]"/><br>
+
+
+        <h3>Interview</h3>
+        <textarea name="gioi_thieu" cols="30" rows="10" placeholder="Hãy cho tôi biết những bộ anime mà bạn thích xem"></textarea>
+
+
+        <h2>chọn đáp án sai</h2>
+        <input type="radio" name="ket_qua" value="a" checked="checked"/>A.2+2=5
+        <input type="radio" name="ket_qua" value="b" checked="checked"/>B.2*2=9
+
+
+        <pre><h2>Waifu cua bạn</h2>
+        <input type="radio" name="ket_qua" value="b" checked="checked"/>C.Mahiru
+        <input type="radio" name="ket_qua" value="b" checked="checked"/>D.Miku</pre>
+
+        <pre></pre><h2>Sigil</h2>
+        <input type="checkbox" name="skills" value="Administrator">Administrator
+        <input type="checkbox" name="skills" value="HinoKagutsuchi">HinoKagutsuchi
+        <input type="checkbox" name="skills" value="King of thorns">King of thorns</pre>
+
+        <pre>><h3>Tp</h3>
+        <select name="city" multiple="multiple" size="2">
+            <option>--Chọn thành phố--</option>
+            <option>Hà Nội</option>
+            <option>Đà Nẵng</option>
+            <option>Tp.HCM</option>
+            <option>Khác</option>
+        </select></pre>
+
+        <pre><input type="url" name="website" id="website"/> <br/> </pre>
+
+        <pre><h3>Email</h3>
+            <input type="email" name="email" size="30" maxlength="50" placeholder=""></pre>
+
+        <pre><input type="date" name="date_of_birth" id="date_of_birth" size="15"></pre>
+
+        <pre><input type="hidden" name="an_so" value="anime" /></pre>
+
+
+        <pre><p>Nhận bài viết mới nhất</p>  
+            <input type="text" name="email" />  
+            <input type="submit" name="dangky" value="Đăng ký" /></pre>
+        
+
+        <pre><input type="file" name="avatar" accept="image/*"/> <br/> </pre>
+
+        
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
