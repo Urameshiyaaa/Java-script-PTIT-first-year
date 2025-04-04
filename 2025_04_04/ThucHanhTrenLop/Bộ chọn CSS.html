@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hoitruong {
+            color: yellow;
+            font-size: 25px;
+        }
+        .hoipho {
+            color: red;
+            font-size: 20px;
+
+        }
+        .thanhvien {
+            color: aqua;
+            font-size: 15;
+        }
+        * {
+            text-align: center;
+        }
+
+
+        div + h2 {
+  background-color: yellow;
+}
+        div ~ h2 {
+            background-color: blueviolet;
+        }
+        div > h2 {
+            font-size: 10px;
+        }
+
+
+        a:visited {
+            color: brown;
+        }
+        a:link {
+            color: blue;
+        }
+        a:hover {
+            color: black;
+        }
+        a:active {
+            color: aqua;
+        }
+        h3:first-child {
+            color: silver;
+        }
+
+        input:focus {
+            background-color: whitesmoke;
+        }
+        p::first-letter {
+            font-size: 30px;
+        }
+        p::after {
+            content:"  Cre: Đức";
+        }
+
+
+        input[value~='anime'] {
+            background-color: azure;
+        }
+
+        p[class^="udu"]{
+            color: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="hoitruong">Shirogane Miyuki</li>
+        <li class="hoipho">Kaguya Shinomiya</li>
+        <li class="thanhvien">Ishigami Yuu</li>
+        <li class="thanhvien">Fujiwara Chika</li>
+    </ul>
+
+
+    <div> <!--Thẻ bố-->
+        <h2>Thẻ con</h2> 
+        <h2>Thẻ con</h2>
+        <section>
+            <p>Thẻ cháu</p>
+        </section>
+    </div>
+    <h2>Thẻ ae vs div</h2>
+    <h2>Thẻ chị e vs div</h2>
+
+
+    <h4>Người này hiện ko còn trên Messenger.<a href="https://i.ytimg.com/vi/wLoRiTk-awo/maxresdefault.jpg">Tìm hiểu thêm</a></h4>
+
+    <h3>Shigatsu wa kimi uso</h3>
+
+    <p>Nhập mật khẩu</p><input type="password" name="mật_khẩu" size="5" maxlength="30" placeholder="">
+
+    <p>Sống thật với cảm xức của chính mình, là 1 điều tuyệt vời, ko phải ai cũng làm được.</p>
+
+
+    <input type="email" name="email" value="anime@gmail.com">
+    <input type="text" name="a" value="animeworld">
+    <input type="text" name="a" value="manga">
+
+
+    <p class="udu">Con người làm đau người khác mà thậm chí còn không nhận ra điều đó. Do đó mà chừng nào con người còn tồn tại, chừng đó thù hận còn tồn tại. Nếu người giết một ai đó, một người khác sẽ giết ngươi, đó là sự thù hận trói buộc chúng ta lại với nhau. Đôi khi ngươi phải đau đớn để nhận thức, vấp ngã để trưởng thành, mất mát để có được bởi bài học lớn nhất của cuộc đời được dạy bằng những nỗi đau. Những kẻ không hề biết đến nỗi đau thực sự sẽ không bao giờ biết đến hòa bình thực sự..</p>
+    <p class="udu_ptit"> Con người làm đau người khác mà thậm chí còn không nhận ra điều đó. Do đó mà chừng nào con người còn tồn tại, chừng đó thù hận còn tồn tại. Nếu người giết một ai đó, một người khác sẽ giết ngươi, đó là sự thù hận trói buộc chúng ta lại với nhau. Đôi khi ngươi phải đau đớn để nhận thức, vấp ngã để trưởng thành, mất mát để có được bởi bài học lớn nhất của cuộc đời được dạy bằng những nỗi đau. Những kẻ không hề biết đến nỗi đau thực sự sẽ không bao giờ biết đến hòa bình thực sự..</p>
+    <p class="goglobal_udu">Con người làm đau người khác mà thậm chí còn không nhận ra điều đó. Do đó mà chừng nào con người còn tồn tại, chừng đó thù hận còn tồn tại. Nếu người giết một ai đó, một người khác sẽ giết ngươi, đó là sự thù hận trói buộc chúng ta lại với nhau. Đôi khi ngươi phải đau đớn để nhận thức, vấp ngã để trưởng thành, mất mát để có được bởi bài học lớn nhất của cuộc đời được dạy bằng những nỗi đau. Những kẻ không hề biết đến nỗi đau thực sự sẽ không bao giờ biết đến hòa bình thực sự..</p>
+
+
+
+
+</body>
+</html>
