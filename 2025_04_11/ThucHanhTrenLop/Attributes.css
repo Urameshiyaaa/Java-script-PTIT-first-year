@@ -1,0 +1,122 @@
+h2 {
+    background-color: #C0C0C0;
+    opacity: 0.5;
+    transparency: 0.3;
+}
+form { 
+    width: 80%;
+    height: 800px;
+    background-image: url("https://i.ytimg.com/vi/u99MBo4pACc/maxresdefault.jpg"); 
+}
+body {
+    background-image: url("https://static.zerochan.net/Miyazono.Kaori.full.1952187.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat-x repeat-y;
+    
+}
+h3 {
+    color: yellow;
+    text-align: center;
+}
+#text-indent{
+    text-indent: 100px;
+    text-decoration: underline gray dotted;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 10em;       
+} 
+
+p.dotted {border-style: dotted;}
+    p.dashed {border-style: dashed;}
+    p.solid {border-style: solid;}
+    p.double {border-style: double;}
+    p.groove {border-style: groove;}
+    p.ridge {border-style: ridge;}
+    p.inset {border-style: inset;}
+    p.outset {border-style: outset;}
+    p.none {border-style: none;}
+    p.hidden {border-style: hidden;}
+    p.mix {border-style: dotted dashed solid double;}
+
+    h4{
+        border: double;
+        border-width: 3px;
+        border-color: #C0C0C0;
+    }
+     h5{
+        border: 5px ridge plum;
+        border-radius: 5px;
+     }
+
+    
+     a:link, a:visited {
+        color: white;
+        background-color: #1ebba3;
+        display: inline-block;
+        padding: 10px 20px;
+        border:2px solid #099983;
+        text-decoration: none;
+        text-align: center;
+        font:14px Time New Roman, sans-serif;
+    }
+    
+    a:hover,a:active{
+        background-color: #9c6ae1;
+        border-color: #7443b6;
+    }
+
+
+    ul {
+        padding: 0;
+        list-style: none;
+        background: #f2f2f2;
+    }
+    ul li {
+        display: inline-block;
+    }
+    ul li a {
+        display: block;
+        padding: 10px 25px;
+        color: #333;
+        text-decoration: none;
+      
+    }
+    ul li a:hover {
+        color: #fff;
+        background: #939393;
+    }
+
+
+
+ul{
+    list-style-type:square;
+    list-style: square inside url("https://fontawesome.com/icons/mug-hot?f=classic&s=solid");
+}
+
+table{
+    border: 1px dashed orange;
+    border-collapse: collapse;
+    width: 50%
+}
+th{
+    text-align: center;
+    padding: 2px;
+    border-bottom: #939393;
+    background-color: #1ebba3;
+    color: #333;
+}
+tr:hover {
+    background-color:rgb(186, 129, 54);
+
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+td{
+    vertical-align: middle;
+    padding: 2px;
+    border-bottom: #939393;
+}
+
+
+
+
