@@ -1,0 +1,17 @@
+.table {width: 750px; margin: 250px auto; border-spacing: 10px;}    /*khoảng cách giữa lề của web và phần tử , chỉ dùng đc khi có display*/
+
+.block {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    
+}
+.block img {width: 100px; height: 100px;}
+.block:hover {border-color: orange;}
+
+.name {font-size: 14px;}
+.name:hover {color: orange;}
+
+.price {font-size: 13px;}
+.price:hover {color: red;}
