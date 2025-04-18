@@ -1,0 +1,29 @@
+.text {
+    border: 2px solid red;
+    padding: 50px;
+    margin: 100px auto;
+    background-color: silver;
+    border-radius: 10px;
+}
+.block {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    border: 3px dashed orange;
+    margin: 100px auto;
+    border-radius: 7px;
+}
+.text:hover {
+    background-color: whitesmoke;
+}
+.style {
+    border: 2px solid red;
+    background-color: red;
+    float: left;
+    width: 300px;
+}
+.text2 {
+    font-size: 100px;
+    color: yellow;
+    margin: 100px 100px;
+}
