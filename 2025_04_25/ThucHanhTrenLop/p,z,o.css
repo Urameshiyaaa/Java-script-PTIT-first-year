@@ -1,0 +1,74 @@
+.evening {background-color: #f7ca94; border-radius: 2px solid;}
+li:hover {background-color: aqua; position: relative;}
+li:hover::after {
+    content: "🌏";
+    right: 7px;
+    position: absolute;
+    
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+body {
+  height: 200vh;
+}
+.content {
+  width: 100%;
+  height: 400px;
+  background-color: #99d1eb;
+}
+ul {
+  padding: 10px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100px;
+}
+a {
+  text-decoration: none;
+  color: #ae2b22;
+}
+
+
+
+div.ex1 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: scroll;
+  }
+  
+  div.ex2 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+  }
+  
+  div.ex3 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: auto;
+  }
+  
+  div.ex4 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: clip;
+  }
+  
+  div.ex5 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: visible;
+  }
+
+

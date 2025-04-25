@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Align-Items Example</title>
+    <link rel="stylesheet" href="Fb.css">
+    <style>
+        .container {
+      display: flex;
+      width: 600px;
+      height: 100px;
+      background-color: #f0f0f0;
+    }
+    .item {
+      background-color: #4CAF50;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+    }
+    .item1 {
+      flex-grow: 1; /* Chiếm 1 phần không gian còn lại */
+    }
+    .item2 {
+      flex-grow: 2; /* Chiếm 2 phần không gian còn lại */
+    }
+    .item3 {
+      flex-grow: 1; /* Chiếm 1 phần không gian còn lại */
+    }
+    </style>
+</head>
+<body>
+    <h2>align-items</h2>
+    <div class="container">
+        <div>
+            <div class="box flex-start">
+                <div style="height: 60px;"></div>
+                <div style="height: 30px;"></div>
+                <div style="height: 40px;"></div>
+            </div>
+            <div class="label">flex-start</div>
+        </div>
+        <div>
+            <div class="box flex-end">
+                <div style="height: 60px;"></div>
+                <div style="height: 30px;"></div>
+                <div style="height: 40px;"></div>
+            </div>
+            <div class="label">flex-end</div>
+        </div>
+        <div>
+            <div class="box center">
+                <div style="height: 60px;"></div>
+                <div style="height: 30px;"></div>
+                <div style="height: 40px;"></div>
+            </div>
+            <div class="label">center</div>
+        </div>
+        <div>
+            <div class="box stretch">
+                <div style="height: auto;"></div>
+                <div style="height: auto;"></div>
+                <div style="height: auto;"></div>
+            </div>
+            <div class="label">stretch</div>
+        </div>
+        <div>
+            <div class="box baseline">
+                <div style="height: 60px;">text text</div>
+                <div style="height: 30px; font-size: 12px;">text text</div>
+                <div style="height: 40px;">text text</div>
+            </div>
+            <div class="label">baseline</div>
+        </div>
+    </div>
+
+    <div class="fd">
+        <span style="background-color: aqua; flex-grow: 2;">Anime</span>
+        <span style="background-color: aquamarine; flex-shrink: 5;">Manga</span>
+        <span style="background-color: violet; flex-basis: 20%;">Light novel</span>
+        <span style="align-self: flex-end; background-color: blanchedalmond;">tôi là 1 coser</span>
+    </div>
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+</body>
+</html>
