@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Anime-Wallpaper-4K-HD.jpg'); 
+    color: #fff;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+.start {
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.start .logo {font-size: 24px; font-weight: bold;}
+.start .search {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 330px;
+}
+.login a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.login a:hover {color: #555; text-decoration: none;}
+
+        
+.main-content {display: flex; padding: 20px;}
+.left-content {flex: 3; margin-right: 20px;}  
+.right-content {flex: 1;}
+
+
+.love-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: auto;
+}
+.love-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100px;
+}
+.love-item img {width: 70px; height: 105px;}
+.love-item h3 {font-size: 10px; margin-bottom: 3px;}
+.love-item p {font-size: 8px; color: #ccc;}
+
+
+
+.ln-section, .anime-section, .love-section {margin-bottom: 20px; width: 86%; margin-left: 15px; }
+.ln-section h2, .anime-section h2, .love-section h2, .reference h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #444;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+.ln-item, .anime-item, .love-item {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: #2a2a2a;
+    padding: 8px;
+    border-radius: 5px;
+    width: 96%;
+}
+.ln-item img {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 6px;
+}
+.ln-item h3 {font-size: 12px; margin-bottom: 3px;}
+.ln-item p {font-size: 10px; color: #ccc;}
+.ln-item .add-button {margin-top: 5px;}
+.scroll {height: 500px; overflow: auto;}
+
+
+
+.anime-section .anime-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+.anime-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    padding: 4px;
+    border-radius: 5px;
+    min-width: 90px;
+    width: calc(15% - 8px);
+}
+.anime-item img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 4px;
+}
+.anime-item h3 {
+    font-size: 10px;
+    margin-bottom: 2px;
+    color: #fff;
+}
+.anime-item p {font-size: 8px; color: #ccc;}
+.anime-item .add-button {margin-top: 4px;}
+
+
+.reference {margin-right: 15px;}
+.reference ul {list-style: none;}
+.reference li {
+    padding: 8px;
+    background-color: #2a2a2a;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.hov:hover {color: #555;}
+
+.add-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+.add-button:hover {background-color: #555;}
+
+
+.style {text-decoration: none; color: #8aff8a;}
+.end {
+    display: flex;
+    justify-content: space-between;
+    background-color: #434343;
+    padding: 33px;
+}
+
