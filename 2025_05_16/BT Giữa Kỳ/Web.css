@@ -78,7 +78,6 @@ body {
 .ln-item img {
     width: 60px;
     height: 90px;
-    object-fit: cover;
     margin-right: 6px;
 }
 .ln-item h3 {font-size: 12px; margin-bottom: 3px;}
@@ -104,12 +103,11 @@ body {
     padding: 4px;
     border-radius: 5px;
     min-width: 90px;
-    width: calc(15% - 8px);
+    width: 15%;
 }
 .anime-item img {
     width: 70px;
     height: 100px;
-    object-fit: cover;
     margin-bottom: 4px;
 }
 .anime-item h3 {
@@ -124,13 +122,13 @@ body {
 .reference {margin-right: 15px;}
 .reference ul {list-style: none;}
 .reference li {
-    padding: 8px;
+    padding: 10px;
     background-color: #2a2a2a;
     margin-bottom: 5px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
 }
+
 .hov:hover {color: #555;}
 
 .add-button {
@@ -139,8 +137,8 @@ body {
     border: none;
     padding: 4px 8px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 10px;
+    cursor: pointer;
 }
 .add-button:hover {background-color: #555;}
 
