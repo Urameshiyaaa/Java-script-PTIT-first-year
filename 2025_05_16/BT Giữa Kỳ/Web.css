@@ -83,10 +83,15 @@ body {
 .ln-item h3 {font-size: 12px; margin-bottom: 3px;}
 .ln-item p {font-size: 10px; color: #ccc;}
 .ln-item .add-button {margin-top: 5px;}
-.scroll {height: 500px; overflow: auto;}
+.scroll {
+    height: 500px; overflow: auto;
+    display: block;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: fadeIn 1.2s ease-in;}
 
-
-
+ 
 .anime-section .anime-grid {
     display: flex;
     flex-wrap: wrap;
@@ -128,6 +133,13 @@ body {
     border-radius: 5px;
     display: flex;
 }
+.reference li {
+    display: block;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: fadeIn 1.2s ease-in;}
+
 
 .hov:hover {color: #555;}
 
@@ -154,3 +166,7 @@ body {
 
 .love-item img, .ln-item img, .anime-item img {transition: transform 0.3s ease;}
 .love-item img:hover, .ln-item img:hover, .anime-item img:hover {transform: scale(1.15);}
+@keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+
+  
+
