@@ -153,3 +153,6 @@ body {
     padding: 33px;
 }
 
+
+.love-item img, .ln-item img, .anime-item img {transition: transform 0.3s ease;}
+.love-item img:hover, .ln-item img:hover, .anime-item img:hover {transform: scale(1.15);}
