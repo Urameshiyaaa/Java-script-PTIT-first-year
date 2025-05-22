@@ -1,31 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+* {margin: 0; padding: 0;}
 body {
     background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Anime-Wallpaper-4K-HD.jpg'); 
     color: #fff;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
 }
-
 
 
 .start {
     background-color: #2a2a2a;
-    padding: 15px 20px;
+    padding: 1px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.start .logo {font-size: 30px; font-weight: bold;}
 .start .search {
     padding: 5px;
     border-radius: 5px;
     border: none;
-    width: 330px;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 15px;
 }
+
+
+.guide {
+    background-color:#2a2a2a; 
+    border: none;
+    padding: 20px 12px;
+}
+.guide:hover {background-color: gray;} 
+
+
+.down {float: left; overflow: hidden;}
+.down .downButton {
+    font-size: 17px;
+    border: none;
+    color: aliceblue;
+    padding: 18px 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.down-content {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.down-content li {
+    float: none;
+    color: aliceblue;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+.down-content li:hover {background-color: gray;}
+.down:hover .down-content {display: block;}
+.down:hover .downButton {background-color: gray; color: aliceblue;}
+
+
+
 .login a {
     color: #fff;
     text-decoration: none;
@@ -33,10 +69,18 @@ body {
 }
 .login a:hover {color: #555; text-decoration: none;}
 
-        
+       
+
 .main-content {display: flex; padding: 20px;}
 .left-content {flex: 3; margin-right: 20px;}  
 .right-content {flex: 1;}
+
+
+.teleport {
+    background-color:#2a2a2a; 
+    border: none;
+    padding: 15px 12px;
+}
 
 
 .love-grid {
@@ -52,12 +96,12 @@ body {
         width: 100px;
 }
 .love-item img {width: 70px; height: 105px;}
-.love-item h3 {font-size: 10px; margin-bottom: 3px;}
-.love-item p {font-size: 8px; color: #ccc;}
+.love-item h3 {font-size: 12px; margin-bottom: 3px;}
+.love-item p {font-size: 10px; color: #ccc;}
 
 
 
-.ln-section, .anime-section, .love-section {margin-bottom: 20px; width: 86%; margin-left: 15px; }
+.ln-section, .anime-section, .love-section {margin-bottom: 20px; width: 90%; margin-left: 15px; }
 .ln-section h2, .anime-section h2, .love-section h2, .reference h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -84,12 +128,15 @@ body {
 .ln-item p {font-size: 10px; color: #ccc;}
 .ln-item .add-button {margin-top: 5px;}
 .scroll {
-    height: 500px; overflow: auto;
+    max-height: 750px;
+    overflow: auto;
     display: block;
-    padding: 1rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    animation: fadeIn 1.2s ease-in;}
+    animation: appear 1.2s ease-in;
+}
+.scroll::-webkit-scrollbar {width: 8px;}
+.scroll::-webkit-scrollbar-track {background: #2a2a2a;}
+.scroll::-webkit-scrollbar-thumb {background: #555; border-radius: 4px;}
 
  
 .anime-section .anime-grid {
@@ -98,6 +145,7 @@ body {
     gap: 8px;
     padding-bottom: 10px;
 }
+.anime-item a {text-decoration: none; color: aliceblue; }
 .anime-item {
     flex: 0 0 auto;
     display: flex;
@@ -122,6 +170,7 @@ body {
 }
 .anime-item p {font-size: 8px; color: #ccc;}
 .anime-item .add-button {margin-top: 4px;}
+.anime-item h3:hover {transition: transform 0.3s ease; transform: scale(1.2);}
 
 
 .reference {margin-right: 15px;}
@@ -138,10 +187,12 @@ body {
     padding: 1rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    animation: fadeIn 1.2s ease-in;}
+    animation: appear 1.2s ease-in;
+}
+.reference li:hover {background-color: #555;}
+.refer {text-decoration: none; color: #bbf4f4;}
+.refer:hover {color: silver;}
 
-
-.hov:hover {color: #555;}
 
 .add-button {
     background-color: #444;
@@ -155,7 +206,7 @@ body {
 .add-button:hover {background-color: #555;}
 
 
-.style {text-decoration: none; color: #8aff8a;}
+.style {text-decoration: none; color: aqua;}
 .end {
     display: flex;
     justify-content: space-between;
@@ -166,7 +217,68 @@ body {
 
 .love-item img, .ln-item img, .anime-item img {transition: transform 0.3s ease;}
 .love-item img:hover, .ln-item img:hover, .anime-item img:hover {transform: scale(1.15);}
-@keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+@keyframes appear {from {opacity: 0;} to {opacity: 1;}}
 
-  
 
+.other {
+    background-color: #444;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 30px ;
+    margin-right: 30px;
+}
+.group {
+    background-color: silver;
+    padding: 40px;
+    color: black;
+
+}
+.group ul {margin-left: 20px;}
+.none {text-decoration: none; color: #3b7777;}
+.none:hover{color: #00bcd4;}
+
+
+.hov_name {transition: transform 0.3s ease; transform-origin: left;}
+.hov_name:hover {transform: scale(1.2);}
+
+
+.more { 
+    position: absolute;
+    max-width: 400px;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    width: 350px;
+    left: 100%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.hov_name:hover .more {display: block;}
+.genre {
+    border-radius: 5px; 
+    padding: 3px; 
+    background-color: gray; 
+    color: aliceblue; 
+    margin-right: 4px; 
+    font-size: 10px;
+}
+.more img {
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+
+.light {animation: neon 0.75s infinite;}
+@keyframes neon {
+  0% {color: #b40000;}
+  50% {color: #282828} 
+  100% {color: #c60000;} 
+}
