@@ -96,12 +96,12 @@ body {
         width: 100px;
 }
 .love-item img {width: 70px; height: 105px;}
-.love-item h3 {font-size: 10px; margin-bottom: 3px;}
-.love-item p {font-size: 8px; color: #ccc;}
+.love-item h3 {font-size: 12px; margin-bottom: 3px;}
+.love-item p {font-size: 10px; color: #ccc;}
 
 
 
-.ln-section, .anime-section, .love-section {margin-bottom: 20px; width: 86%; margin-left: 15px; }
+.ln-section, .anime-section, .love-section {margin-bottom: 20px; width: 90%; margin-left: 15px; }
 .ln-section h2, .anime-section h2, .love-section h2, .reference h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -128,12 +128,15 @@ body {
 .ln-item p {font-size: 10px; color: #ccc;}
 .ln-item .add-button {margin-top: 5px;}
 .scroll {
-    height: 500px; 
+    max-height: 750px;
     overflow: auto;
     display: block;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     animation: appear 1.2s ease-in;
 }
+.scroll::-webkit-scrollbar {width: 8px;}
+.scroll::-webkit-scrollbar-track {background: #2a2a2a;}
+.scroll::-webkit-scrollbar-thumb {background: #555; border-radius: 4px;}
 
  
 .anime-section .anime-grid {
@@ -244,6 +247,7 @@ body {
 
 .more { 
     position: absolute;
+    max-width: 400px;
     display: none;
     background-color: #333;
     color: #fff;
@@ -272,3 +276,9 @@ body {
 }
 
 
+.light {animation: neon 0.75s infinite;}
+@keyframes neon {
+  0% {color: #b40000;}
+  50% {color: #282828} 
+  100% {color: #c60000;} 
+}
