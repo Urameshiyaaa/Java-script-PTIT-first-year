@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link language="javascript" href="SkĐt.js">
+</head>
+<body>
+    <p>Bạn có thể click vào button bên dưới và xem kết quả</p>
+	<button onclick="myFunction()">Click me</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunction() {
+			document.getElementById('demo').innerHTML = "Zent Group";
+		}
+	</script>
+
+
+    <img src="smiley.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" 
+width="32" height="32" alt="Smiley">
+	<script type="text/javascript">
+		function bigImg(x) {
+			x.style.height = "64px";
+			x.style.width = "64px";
+		}
+		function normalImg(x) {
+			x.style.height = "32px";
+			x.style.width = "32px";
+		}
+	</script>
+
+    Enter your name: <input type="text" name="" id="fname" onblur="myFunction()">
+	<p>Khi bạn kích chuột ra khỏi ô input và bạn sẽ nhận thấy kết quả</p>
+	<script type="text/javascript">
+		function myFunction() {
+			var x = document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+		
+	</script>
+
+
+
+Enter your name: <input type="text" name="" id="fname" onfocus="myFunction(this)">
+	<p>Khi bạn click chuột vào ô input, bạn sẽ thấy kết quả</p>
+	<script type="text/javascript">
+		function myFunction(x) {
+			x.style.background = "red";
+		}
+		
+	</script>
+
+
+<p>Select the car from the list</p>
+	<select id="mySelect" onchange="myFunction()">
+		<option value="Audi">Audi</option>
+		<option value="BMW">BMW</option>
+		<option value="Mercedes">Mercedes</option>
+		<option value="Volvo">Volvo</option>
+	</select>
+	<p>When you select the car function is triggered which outputs the value of the selected car</p>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunction() {
+			var x = document.getElementById("mySelect").value;
+			document.getElementById("demo").innerHTML = "You selected" + x;
+		}
+		
+	</script>
+
+
+<p>When you submit the form, a function is triggered which alerts some text.</p>
+	<form action="" onsubmit="myFunction()">
+	  Enter name: <input type="text" name="fname">
+	  <input type="submit" value="Submit">
+	</form>
+
+	<script>
+		function myFunction() {
+		  alert("The form was submitted");
+		}
+	</script>
+
+    <form name="frm">
+		<input type="text" name="name">
+		<input type="password" name="pass">
+		<textarea name="area"></textarea>
+		<input type="submit" name="submit" value="Submit" onclick="getValue()">
+	</form>
+	<script type="text/javascript">
+		function getValue(){
+			alert(document.frm.name.value);
+			alert(document.frm.pass.value);
+			alert(document.frm.area.value);
+		}
+		
+	</script>
+
+    <form name="frm" onsubmit="getValue()">
+		<input type="radio" name="rd" value="HTML">HTML
+		<input type="radio" name="rd" value="CSS">CSS
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<script type="text/javascript">
+		function getValue() {
+			for (var i = 0; i < 2; i++) {
+				if (document.frm.rd[i].checked == true) {
+					alert(document.frm.rd[i].value);
+				}
+			}
+		}
+	</script>
+
+    <form name="frm" onsubmit="getValue()">
+		<select name="slt">
+			<option value="Item1">Item1</option>
+			<option value="Item2">Item2</option>
+			<option value="Item3">Item3</option>
+		</select>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<script type="text/javascript">
+		function getValue() {
+			var index = document.frm.slt.selectedIndex;
+			alert(document.frm.slt[index].value);
+		}
+	</script>
+
+
+    
+</body>
+</html>
