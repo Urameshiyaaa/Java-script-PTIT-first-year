@@ -5,6 +5,13 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-size: 16px;
+    animation: change 20s infinite; 
+}
+@keyframes change {
+    0% {background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Anime-Wallpaper-4K-HD.jpg");}
+    33% {background-image: url("https://wallpaperaccess.com/full/2830779.jpg");}
+    66% {background-image: url("https://applescoop.org/image/wallpapers/mac/night-mode-anime-style-cottage-on-a-hill-at-dark-night-best-most-popular-free-download-wallpapers-for-macbook-pro-and-macbook-air-and-microsoft-windows-desktop-pcs-4k-07-12-2024-1733638190-hd-wallpaper.webp");}
+    100% {background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Anime-Wallpaper-4K-HD.jpg");}
 }
 
 
