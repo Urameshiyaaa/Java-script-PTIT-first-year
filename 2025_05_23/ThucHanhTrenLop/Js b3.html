@@ -89,8 +89,24 @@ Vừa chơi game, xem phim, đọc manga, vừa uống Coca, ăn Junk Food đư�
     console.log(f.pop())
     alert(a.unshift('Amane'))
     document.writeln(a.shift())
-     
 
+    
     </script>
+    <form name="frm" onsubmit="getValue()">
+		<input type="radio" name="rd" value="HTML">HTML
+		<input type="radio" name="rd" value="CSS">CSS
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<script type="text/javascript">
+		function getValue() {
+			for (var i = 0; i < 2; i++) {
+				if (document.frm.rd[i].checked == true) {
+					alert(document.frm.rd[i].value);
+				}
+			}
+		}
+	</script>
+
+
 </body>
 </html>
