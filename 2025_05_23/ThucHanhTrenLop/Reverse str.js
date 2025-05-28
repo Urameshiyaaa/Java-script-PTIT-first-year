@@ -7,4 +7,4 @@
             }
         return ans;
         }   
-        daoNguocChuoi(ans)
+        daoNguocChuoi(str)
