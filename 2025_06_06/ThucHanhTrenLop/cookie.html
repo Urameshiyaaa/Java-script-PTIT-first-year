@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.cookie = 'name=UDU; expires=Thu, 4 June 2024 19:55:20 UTC';
+        function setCookie(cname, cvalue, cmin) {
+            const d = new Date();
+            d.setTime(d.getTime() + (cmin*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        setCookie()
+    </script>
+    <h1>form đăng nhập</h1>
+    <form action="" name="form_login">
+        username: <input type="text" name="user_name"><br>
+        password: <input type="password" name="mat_khau"><br>
+        <button onclick="login()">Login</button>
+    </form>
+    <script>
+        function redirect(){
+            window.location.href = 'admin.html'
+        }
+        function login(){
+            var ten_dang_nhap = document.form_login.user_name.value;
+            var mat_khau = document.forms_login.mat_khau.value;
+            var isLogin = 0;
+            if (ten_dang_nhap == 'admin' && mat_khau == '123456'){
+                isLogin=1;
+            }
+            if (isLogin == 1){
+                redirect()
+            }
+    
+        }
+    </script>
+</body>
+</html>
