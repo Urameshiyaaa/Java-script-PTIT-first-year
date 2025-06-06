@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UDU</title>
+</head>
+<body>
+    <div>Dùng cái này để thêm thời gian vào phần comment btl</div>
+    <button type="button" onclick="get()">Click</button>
+    <p id="result"></p>
+    <script type="text/javascript">
+        var date = new Date();
+        document.writeln(date);
+        function get() {
+            var date = new Date();
+            var data = 'Ngày trong tháng: ' + date.getDate() + '<br />';
+            data += 'Tháng trong năm: ' + date.getMonth() + '<br />';
+            data += 'Năm đầy đủ: ' + date.getFullYear() + '<br />';
+            data += 'Giờ: ' + date.getHours() + '<br />';
+            data += 'Phút: ' + date.getMinutes() + '<br />';
+            data += 'Giây: ' + date.getSeconds() + '<br />';
+            document.getElementById('result').innerHTML = data;
+        }
+    </script>
+</body>
+</html>
+       
