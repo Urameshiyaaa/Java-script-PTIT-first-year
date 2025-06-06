@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (typeof(Storage) !== 'undefined') {
+            //localStorage.setItem('udu', '2024'); Hoặc
+            localStorage.udu = 2024;
+        } 
+        else {
+            alert('Trình duyệt của bạn không hỗ trợ localStorage. Hãy nâng cấp trình duyệt để sử dụng!');
+        }
+        var data = localStorage.getItem('udu'); 
+        // hơặc data = localStorage.udu
+        alert(data);
+    </script>
+</body>
+</html>
