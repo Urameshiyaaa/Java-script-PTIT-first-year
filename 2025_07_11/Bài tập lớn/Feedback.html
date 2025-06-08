@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://i.pinimg.com/236x/a3/96/2e/a3962ed14ac3c43be31b5df6e5f905ec.jpg">
     <link rel="stylesheet" href="Feedback.css">
+
 </head>
 <body>
     <div class="start">
@@ -98,27 +99,82 @@
                 <span class="time">1 năm</span>
             </div>
             <div class="post-content">
-                <p style="line-height: 1.5;">Hiện Cổng Anime, Manga, Light novel mới đi vào hoạt động, chưa được lâu dài và đang trong quá trình thử nghiệm.
+                <p style="line-height: 1.5; font-size: 18px;">Hiện Cổng Anime, Manga, Light novel mới đi vào hoạt động, chưa được lâu dài và đang trong quá trình thử nghiệm.
 Do vẫn phải cập nhật thêm nhiều tính năng để đáp ứng được cầu của các bạn nên có thể vẫn có lỗi xảy ra, rất mong các bạn sẽ thông cảm. 
 Nếu có bất kì lỗi nào phát sinh trong lúc sử dụng hãy để lại bình luận để thông báo cho mình biết, mình sẽ sớm khắc phục.<br>
 Cảm ơn những đóng góp của các bạn, hi vọng các bạn sẽ tiếp tục ủng hộ.<br>
-Liên hệ discord <a href="#" class="discord-link">@HikiNeet</a><br>
+Liên hệ discord <b style="color: aqua;">@HikiNeet</b><br>
 Chúc các bạn có trải nghiệm vui vẻ!<br>
 P/s: À, chỗ này các bạn cũng có thể dùng để thảo luận được nhé.</p>
             </div>
         </div>
 
 
-        <div class="cmt-section">
-            <div class="cmt-box">
-                <input style="width: 30px;display: none;" type="file" name="avatar" accept="image/*" id="file"/>
-                <label for="file" style="width: 15px;cursor: pointer;">🔗</label>
-                <input type="text" class="cmt-input" placeholder="P">
-                <button class="submit-bt">Đăng bình luận</button>
+        <div class="cmt-container">
+            <div class="cmt-section">
+                <div class="cmt-box">
+                    <input style="width: 30px;display: none;" type="file" name="avatar" accept="image/*" id="file"/>
+                    <label for="file" style="width: 15px;cursor: pointer;">🔗</label>
+                    <input type="text" class="cmt-input" id="cmtInput" placeholder="P">
+                    <button class="submit-bt" onclick="postComment()">Đăng bình luận</button>
+                </div>
+                <div id="commentList" class="scroll"></div>
             </div>
         </div>
 
     </div>
+    <script>
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+        function postComment() {
+            const commentInput = document.getElementById('cmtInput');
+            const commentText = commentInput.value.trim();
+
+            if (commentText === '') {
+                alert('Vui lòng nhập nội dung bình luận!');
+                return;
+            }
+
+            const newComment = {
+                id: Date.now(),
+                username: 'Người dùng ẩn danh',
+                text: commentText,
+                time: new Date().toLocaleString('vi-VN', { 
+                    day: '2-digit', 
+                    month: '2-digit', 
+                    year: 'numeric', 
+                    hour: '2-digit', 
+                    minute: '2-digit' 
+                })
+            };
+
+            comments.push(newComment);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            commentInput.value = '';
+            renderComments();
+        }
+
+        function renderComments() {
+            const commentList = document.getElementById('commentList');
+            commentList.innerHTML = '';
+
+            comments.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.className = 'post';
+                commentElement.style.marginTop = '10px';
+                commentElement.innerHTML = `
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+                        <span class="username">${comment.username}</span>
+                        <span class="time">${comment.time}</span>
+                    </div>
+                    <div class="post-content">${comment.text}</div>
+                `;
+                commentList.appendChild(commentElement);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', renderComments);
+    </script>
 
 
     <div class="end">
