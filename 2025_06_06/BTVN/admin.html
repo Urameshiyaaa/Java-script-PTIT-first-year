@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Form đăng nhập</h1>
+    <form action="" name="form_dang_nhap">
+        username: <input type="text" name="username"><br>
+        password: <input type="password" name="mat_khau"><br>
+        <button onclick="login()">Login</button>
+    </form>
+    <script>
+        function redirect(){
+            window.location.href = 'admin.html'
+        }
+        function login(){
+            var ten_dang_nhap = document.form_dang_nhap.user_name.value
+            var mat_khau = document.form_dang_nhap.mat_khau.value
+            var isLogin = 0
+            if (ten_dang_nhap == 'admin' && mat_khau == 'password'){
+                isLogin = 1
+            }
+            if (isLogin == 1){
+                redirect()
+            }
+        }
+    </script>
+</body>
+</html>
