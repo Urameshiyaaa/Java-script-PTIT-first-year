@@ -177,6 +177,18 @@ body {
 .submit-bt:hover {background-color: whitesmoke;color: #2a2a2a;}
 
 
+.delete-bt {
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #868686;
+    background-color: #2a2a2a;
+    margin-left: 10px;
+}
+.delete-bt:hover {background-color: whitesmoke; color: #2a2a2a;}
+
 
 .button1, .button2 {
     border-radius: 20px;
