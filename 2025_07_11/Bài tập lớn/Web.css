@@ -49,6 +49,7 @@ body {
     font-family: inherit;
     margin: 0;
 }
+.downButton {cursor: pointer;}
 .down-content {
     display: none;
     position: absolute;
