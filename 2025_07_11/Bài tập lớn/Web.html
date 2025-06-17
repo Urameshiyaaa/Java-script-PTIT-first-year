@@ -42,15 +42,15 @@
             <div class="down">
                 
                 <button class="downButton">Thể loại</button>
-                    <ul class="down-content">
-                        <li> <a href="#" style="text-decoration: none; color: aliceblue;">Romcom</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">School life</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Slice of Life</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Shounen</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Isekai</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Mystery</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Action</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Harem</a></li>
+                    <ul class="down-content" id="category-list">
+                        <li data-genre="romcom"><a href="#" style="text-decoration: none; color: aliceblue;">Romcom</a></li>
+                        <li data-genre="school life"><a href="#" style="text-decoration: none; color: aliceblue;">School life</a></li>
+                        <li data-genre="slice of life"><a href="#" style="text-decoration: none; color: aliceblue;">Slice of Life</a></li>
+                        <li data-genre="shounen"><a href="#" style="text-decoration: none; color: aliceblue;">Shounen</a></li>
+                        <li data-genre="isekai"><a href="#" style="text-decoration: none; color: aliceblue;">Isekai</a></li>
+                        <li data-genre="mystery"><a href="#" style="text-decoration: none; color: aliceblue;">Mystery</a></li>
+                        <li data-genre="action"><a href="#" style="text-decoration: none; color: aliceblue;">Action</a></li>
+                        <li data-genre="harem"><a href="#" style="text-decoration: none; color: aliceblue;">Harem</a></li>
                     </ul>
             </div>
             <div class="down">
@@ -99,7 +99,7 @@
     <script language="javascript" src="Web.js"></script>
 
 
-    <div style="margin-left: 35px; margin-top: 20px; animation: appear 1.2s ease-in">
+    <div style="margin-left: 35px; margin-top: 20px; animation: appear 1.2s ease-in;">
         <div style="display: inline;"><button class="teleport"><a href="#love" style="text-decoration: none;color: aliceblue; font-size: 14px;">Yêu thích <hr style="color: aliceblue;"></a></button></div>
         <div style="display: inline;"><button class="teleport"><a href="#ln" style="text-decoration: none;color: aliceblue; font-size: 14px;">Light novel <hr style="color: aliceblue;"></a></button></div>
         <div style="display: inline;"><button class="teleport"><a href="#manga" style="text-decoration: none;color: aliceblue; font-size: 14px;">Manga <hr style="color: aliceblue;"></a></button></div>
@@ -120,122 +120,122 @@
                 <h2 id="anime">ANIME</h2>
                 <div class="scroll fade">
                 <div class="anime-grid">
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://i1.sndcdn.com/artworks-000102584894-8rr4kl-t240x240.jpg" alt="Lời nói dối tháng tư">
-                        <h3 id="Lời nói dối tháng 4"><a href="https://animevietsub.lol/phim/thang-tu-la-loi-noi-doi-cua-em-i1-a2432/" target="_blank">Shigatsu kimi no uso (Lời nói dối tháng tư)</a></h3>
+                        <h3><a href="https://animevietsub.lol/phim/thang-tu-la-loi-noi-doi-cua-em-i1-a2432/" target="_blank">Shigatsu kimi no uso (Lời nói dối tháng tư)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, mystery">
                         <img src="https://lede-admin.aftermath.site/wp-content/uploads/sites/55/2025/03/Solo-Leveling-Crunchyroll-Anime-A1-Pictures.jpg?resize=2880%2C1620" alt="Tôi thăng cấp 1 mình">
                         <h3><a href="https://animevietsub.lol/phim/solo-leveling-2nd-i6-a5381/" target="_blank">Solo Leveling (Tôi thăng cấp một mình)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://static.minhtuanmobile.com/uploads/editer/2025-03/06/images/lich-chieu-thanh-guom-diet-quy-vo-han-thanh-tai-viet-nam-1.webp" alt="Thanh gươm diệt quỷ">
                         <h3><a href="https://animevietsub.lol/phim/thanh-guom-diet-quy-dai-tru-dac-huan-i4-a5257/" target="_blank">Kimetsu no yaiba (Thanh gươm diệt quỷ)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen, mystery">
                         <img src="https://wibu.com.vn/wp-content/uploads/2024/09/one-piece.jpg">
                         <h3><a href="https://animevietsub.lol/phim/dao-hai-tac-one-piece-a1/" target="_blank">One piece</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" >
                         <img src="https://upload.wikimedia.org/wikipedia/vi/4/4f/Dragon_Ball_Super_artwork.jpg" alt="7 viên ngọc rồng siêu cấp">
                         <h3><a href="https://animehay.tax/thong-tin-phim/dragon-ball-super-3.html" target="_blank">Dragon Ball Super</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://m.media-amazon.com/images/M/MV5BMzcxNDU3NGYtZDNiNi00NDUwLWI4NDctNmJjZGVjMzFkNTI3XkEyXkFqcGc@._V1_.jpg" alt="Bí mật tình yêu nơi công sở">
-                        <h3> <a href="https://animevietsub.lol/phim/kono-kaisha-ni-suki-na-hito-ga-imasu-a5515/" target="_blank">Kono Kaisha ni Suki na Hito ga Imasu (Bí mật tình yêu nơi công sở)</a></h3>
+                        <h3 ><a href="https://animevietsub.lol/phim/kono-kaisha-ni-suki-na-hito-ga-imasu-a5515/" target="_blank"> Kono Kaisha ni Suki na Hito ga Imasu (Bí mật tình yêu nơi công sở)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, isekai">
                         <img src="https://m.media-amazon.com/images/M/MV5BZjc4ZGZkNjMtZTRkYS00Mjk4LTgwMzAtMzg1MWZlZjcxNDRhXkEyXkFqcGc@._V1_.jpg" alt="Khiên hiệp sĩ">
                         <h3><a href="https://animevietsub.lol/phim/tate-no-yuusha-no-nariagari-season-3-a4901/" target="_blank">Tate no yuusha no nariagari (Khiên hiệp sĩ)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, isekai">
                         <img src="https://i.ebayimg.com/images/g/beIAAOSwUtdiT~ar/s-l1200.jpg" alt="Từ tầm thường đến bất khả chiến bại">
                         <h3><a href="https://animevietsub.lol/phim/arifureta-shokugyou-de-sekai-saikyou-3rd-season-a5382/" target="_blank">Arifureta Shokugyou de Sekai Saikyou (Từ tầm thường đến bất khả chiến bại)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://m.media-amazon.com/images/M/MV5BMjJlZTI4MzEtNTE3MS00ZTM4LWIwZTktMDg2ODc5MjcwYmQxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Fairy tail: Nhiệm vụ 100 năm">
                         <h3><a href="https://animevietsub.lol/phim/fairy-tail-100-nen-quest-a5268/" target="_blank">Fairy Tail: 100 Years Quest (Fairy tail: Nhiệm vụ 100 năm)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, harem">
                         <img src="https://cdn.animenewsnetwork.com/hotlink/thumbnails/max600x600/cms/news.7/215183/keyvisual_englishlogo.jpg" alt="Nhà có 5 nàng dâu">
                         <h3><a href="https://animevietsub.lol/phim/5-toubun-no-hanayome-movie-a4247/" target="_blank">Gotoubun no Hanayome (Nhà có 5 nàng dâu)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_.jpg" alt="Naruto">
                         <h3><a href="https://animevietsub.lol/phim/naruto-suc-manh-vi-thu-r2-a5/" target="_blank">Naruto Shippuden</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen, mystery">
                         <img src="https://m.media-amazon.com/images/M/MV5BNzVjOWEwYjEtNDJhOC00YjUyLThjMWItMDQwZGY1ODM4YzI3XkEyXkFqcGc@._V1_.jpg" alt="Attack on Titan">
                         <h3><a href="https://animevietsub.lol/phim/attack-on-titan-the-last-attack-a5481/" target="_blank">Shingeki no Kyojin (Attack on Titan)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, slice of life">
                         <img src="https://www.anmosugoi.com/wp-content/uploads/2025/01/Otonari-no-Tenshi-sama-ni-Itsunomanika-Dame-Ningen-ni-Sareteita-Ken-anime-visual.webp" alt="Thiên sứ nhà bên">
                         <h3><a href="https://animevietsub.lol/phim/otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken-a4662/" target="_blank">Otonari no Tenshi-sama (Thiên sứ nhà bên)</a> </h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, slice of life">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_2VYSK3Wq4lhYjhsKqELZ9DgB_VzzuVI56Kr7qjk1uQ&s&ec=72940545" alt="Arya bàn bên trêu ghẹo tôi bằng tiếng Nga">
                         <h3><a href="https://animevietsub.lol/phim/tokidoki-bosotto-russia-go-de-dereru-tonari-no-alya-san-a4929/" target="_blank">Tokidoki Bosotto Roshia-go de Dereru Tonari no Arya-san (Arya bàn bên trêu ghẹo tôi bằng tiếng Nga)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://m.media-amazon.com/images/M/MV5BM2Q1NDI4ZjItOTkzNC00YzI2LTk0ODgtMTk2MjJhMjNjMjM0XkEyXkFqcGc@._V1_.jpg" alt="Chú thuật hồi chiến">
                         <h3><a href="https://animevietsub.lol/phim/jujutsu-kaisen-2nd-season-i5-a4467/" target="_blank">Jujutsu Kaisen (Chú thuật hồi chiến)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, slice of life">
                         <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png" alt="Your name">
                         <h3><a href="https://animevietsub.lol/phim/ten-cau-la-gi-a1493/" target="_blank">Kimi no Na wa (Your name)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, mystery">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzvyjhWeL3E1W7lKLAPo5-WA5Y6L0HiSESyRdSAnuYWw&s&ec=72940545" alt="Yamada và 7 phù thủy">
                         <h3><a href="https://animevietsub.lol/phim/yamada-va-that-dai-ma-nu-a2021/" target="_blank">Yamada kun to 7 nin no majo (Yamada và 7 phù thủy)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, school life">
                         <img src="https://m.media-amazon.com/images/M/MV5BNDA2MDRhNTEtMjU4NC00MzZjLWJjM2UtZDg4MWI5OWU3ZjEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
                         <h3><a href="https://animevietsub.lol/phim/wind-breaker-2nd-season-a5592/" target="_blank">Wind Breaker</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://pics.filmaffinity.com/nisekoi-610804523-mmed.jpg" alt="Tình yêu giả tạo">
                         <h3><a href="https://animehay.tax/thong-tin-phim/nisekoi-ss1-223.html" target="_blank">Nisekoi (Tình yêu giả tạo)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="slice of life, school life">
                         <img src="https://upload.wikimedia.org/wikipedia/vi/c/c6/Koe_no_Katachi_Film_Poster.jpg" alt="Dáng hình thanh âm">
                         <h3><a href="https://animehay.tax/thong-tin-phim/koe-no-katachi-1562.html" target="_blank">Koe no Katachi (Dáng hình thanh âm)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="school life, slice of life">
                         <img src="https://pics.filmaffinity.com/kimi_no_suizo_wo_tabetai-287102864-large.jpg" alt="Tớ muốn ăn tụy của cậu">
                         <h3><a href="https://animehay.tax/thong-tin-phim/kimi-no-suizou-wo-tabetai-2707.html" target="_blank">Kimi no Suizou wo Tabetai (Tớ muốn ăn tụy của cậu)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action">
                         <img src="https://m.media-amazon.com/images/M/MV5BY2MzZGVhZTgtNWZlYi00NGI5LTk5N2QtYTkzMzNkMWM0NjBhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Học viện ma vương">
                         <h3><a href="https://animehay.tax/thong-tin-phim/maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e-kayou-ii-3681.html" target="_blank">Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou (Học viện ma vương)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action">
                         <img src="https://m.media-amazon.com/images/M/MV5BYjlhNGU3MjgtM2U0ZC00YTA1LTk1NWMtNzA1ODZjODRmZWVhXkEyXkFqcGc@._V1_.jpg" alt="Lớp học điệp viên">
                         <h3><a href="https://animehay.tax/thong-tin-phim/spy-kyoushitsu-3671.html" target="_blank">Spy Kyoushitsu (Lớp học điệp viên)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="slice of life, school life">
                         <img src="https://static2.vieon.vn/vieplay-image/poster_v4/2022/05/20/d4ppmz00_660x946-spyxfamily-demoa2731c005ce704ec40c7ff515b2b1afb.jpg" alt="Gia đình điệp viên">
                         <h3><a href="https://animehay.tax/thong-tin-phim/spy-x-family-3489.html" target="_blank">Spy x Family (Gia đình điệp viên)</a></h3>
                         <button class="add-button">Yêu thích</button>
@@ -248,7 +248,7 @@
             <div class="ln-section">
                 <h2 id="ln">LIGHT NOVEL</h2>
                 <div class="scroll">
-                    <div class="ln-item"> 
+                    <div class="ln-item" data-genres="romcom, school life"> 
                         <img src="https://nami.news/wordpress/wp-content/uploads/2025/04/Class-de-2-ban-Me-ni-Kawaii-Onna-no-Ko-to-Tomodachi-ni-Natta-Novel-Cover-7.5.jpg" alt="Làm bạn với cô nàng dễ thương nhì lớp">
                         <div>
                             <h3 class="hov_name">Kurasu de Nibanme ni Kawaii onna no ko to Tomodachi ni natta
@@ -273,7 +273,7 @@ Vừa chơi game, xem phim, đọc manga, vừa uống Coca, ăn Junk Food đư�
                         </div>
                     </div>
 
-                    <div class="ln-item">
+                    <div class="ln-item" data-genres="romcom, harem, school life">
                         <img src="https://i.hako.vn/ln/series/covers/s18494-0e0d1162-8141-4a8b-bd7f-f8379645d8c2.jpg" alt="Nàng idol đói bụng">
                         <div>
                             <h3 class="hov_name">Daininki Idol na Classmate ni Natsukareta, Isshou Hatarakitakunai Ore
@@ -290,7 +290,7 @@ Shidou Rintaro, một cậu trai trung học bình thường với ước mơ tr
                         </div>
                     </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://online.anyflip.com/cuvof/jovo/files/large/e9dcdfd723944caa1b5043b5ed7197fa.jpg?1704318619" alt="Thiên sứ nhà bên">
                     <div>
                         <h3 class="hov_name">Otonari no Tenshi-sama
@@ -307,7 +307,7 @@ Fujimiya Amane là một học sinh cao trung sống một mình. Cậu đang t�
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life, slice of life"> 
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhaCMggoosNI2jc5AU_BuhnlFTwKc2phm7nTyhpqb3Xw&s&ec=72940545" alt="Làm cách nào để tránh xa một cô gái xinh đẹp đây">
                     <div>
                         <h3 class="hov_name">Bishoujo to Kyori wo Oku Houhou
@@ -340,7 +340,7 @@ Một câu chuyện tình yêu giữa hai người đối lập nhau trở thàn
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://cdn.novelupdates.com/images/2021/11/Inkya-no-Boku-ni-Batsu-Game-ni-Kokuhaku-Shitekita-Hazu-no-Gyaru-ga-Doumitemo-Boku-ni-Betahore-Desu.jpeg" alt="Gyaru tỏ tình vì trò chơi trừng phạt nhưng yêu tôi">
                     <div>
                         <h3 class="hov_name">Inkya no Boku ni Batsu Game ni Kokuhaku Shitekita Hazu no Gyaru ga,<br> 
@@ -366,7 +366,7 @@ Nhưng cái cách mà họ gặp nhau mỗi buổi sáng, cùng nhau đi đến 
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://cdn.novelupdates.com/images/2021/02/My-Plainlooking-Fiance-is-Secretly-Sweet-with-Me_1614145093.jpg" alt="Hôn thê nhạt nhẽo của tôi chỉ đáng yêu khi ở nhà" >
                     <div>
                         <h3 class="hov_name">Ore no Iinazuke ni natta Jimiko, Ie de wa Kawaii Shika nai
@@ -388,7 +388,7 @@ Nhưng cái cách mà họ gặp nhau mỗi buổi sáng, cùng nhau đi đến 
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life, slice of life"> 
                     <img src="https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx146484-D9CZzEAE3VLN.jpg" alt="Vợ cũ hồi xuân">
                     <div>
                         <h3 class="hov_name">Ore no kurasu ni wakagaetta motoyome ga iru
@@ -417,7 +417,7 @@ Nhưng mà, do có cùng sở thích nên rằng đi đâu họ cũng chạm m�
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://static.truyenchu.com.vn/Data/maigo-ni-natteita-youjo-wo-tasuketara-otonari-ni-sumu-bishoujo-ryuugakusei-ga-ie-ni-asobi-ni-kuru-yo/300.jpg" alt="Otonari Asobi">
                     <div>
                         <h3 class="hov_name">
@@ -436,7 +436,7 @@ Một ngày nọ, Charlotte Bennett du học và chuyển tới lớp của Akih
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://pbs.twimg.com/media/FDMthNtUcAU2sKa.jpg:large" alt="Sống cùng nữ sinh dễ thương nhất" style="font-size: 11px;">
                     <div>
                         <h3 class="hov_name">Ryoushin no Shakkin wo Katagawari shite Morau Jouken wa Nihon Ichi
@@ -455,7 +455,7 @@ Chàng trai không hề có kinh nghiệm tình trường, nhưng luôn vô tư 
                     </div>
                 </div>
 
-                <div class="ln-item"> 
+                <div class="ln-item" data-genres="romcom, school life"> 
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkmUy2J9jmNkFR-PS6EA0fgkO2Cc3XlwAFk3qX1y5d1Q&s&ec=72940545" alt="Bạn gái Anh Quốc muốn nói Suki thay vì I Love You">
                     <div>
                         <h3 class="hov_name">Eikoku Kanojo wa "Rabu Yuu" jyanakute "SUKI" to iitai
@@ -501,68 +501,89 @@ Liệu mối quan hệ mới này có thể xóa nhòa quá khứ? Liệu mối 
                 <h2 id="manga">Manga</h2>
                 <div class="scroll fade">
                 <div class="anime-grid">
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://sakarychan.wordpress.com/wp-content/uploads/2023/07/class-de-2-banme-ni-kawaii-onnanoko-to-tomodachi-ni-natta.jpg" alt="Gái xinh nhì">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/lam-ban-voi-co-gai-dang-yeu-thu-hai-lop-12902" target="_blank">Làm bạn với cô nàng đáng yêu thứ nhì lớp</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom">
                         <img src="https://product.hstatic.net/200000287623/product/changbanggiavananglanhlung_2_manga_bia_1_2e950b78817847fcb07db2b8b652d40d_master.png" alt="Chàng băng giá, nàng lạnh lùng">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/chang-bang-gia-va-nang-lanh-lung-7076" target="_blank">Chàng băng giá, nàng lạnh lùng</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://storage-ct.lrclib.net/file/cuutruyen/uploads/manga/2369/cover/processed-3a1c00b03ca0de03666536af6cf6be2e.jpg" alt="Satou Koharu">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/shiotaiou-no-sato-san-ga-ore-ni-dake-amai-10307" target="_blank">Shiotaiou No Sato-San Ga Ore Ni Dake Amai</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, school life">
                         <img src="https://m.media-amazon.com/images/M/MV5BNDA2MDRhNTEtMjU4NC00MzZjLWJjM2UtZDg4MWI5OWU3ZjEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/wind-breaker-nii-satoru-13966" target="_blank">Wind Breaker</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action, shounen">
                         <img src="https://m.media-amazon.com/images/M/MV5BMjJlZTI4MzEtNTE3MS00ZTM4LWIwZTktMDg2ODc5MjcwYmQxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Fairy tail: Nhiệm vụ 100 năm">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/hoi-phap-su-nhiem-vu-100-nam-5212" target="_blank">Fairy Tail: 100 Years Quest</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom">
                         <img src="https://m.media-amazon.com/images/M/MV5BMzcxNDU3NGYtZDNiNi00NDUwLWI4NDctNmJjZGVjMzFkNTI3XkEyXkFqcGc@._V1_.jpg" alt="Bí mật tình yêu nơi công sở">
                         <h3> <a href="https://truyenqqgo.com/truyen-tranh/em-co-the-giu-bi-mat-giup-anh-9126" target="_blank">Kono Kaisha ni Suki na Hito ga Imasu (Bí mật tình yêu nơi công sở)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="action">
                         <img src="https://lede-admin.aftermath.site/wp-content/uploads/sites/55/2025/03/Solo-Leveling-Crunchyroll-Anime-A1-Pictures.jpg?resize=2880%2C1620" alt="Tôi thăng cấp 1 mình">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/toi-thang-cap-mot-minh-ss2-10087" target="_blank">Solo Leveling (Tôi thăng cấp 1 mình)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, mystery">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzvyjhWeL3E1W7lKLAPo5-WA5Y6L0HiSESyRdSAnuYWw&s&ec=72940545" alt="Yamada và 7 phù thủy">
                         <h3><a href="http://truyenqqgo.com/truyen-tranh/yamada-kun-to-7-nin-no-majo-233" target="_blank">Yamada kun to 7 nin no majo</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://pics.filmaffinity.com/nisekoi-610804523-mmed.jpg" alt="Tình yêu giả tạo">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/tinh-yeu-gia-tao-596" target="_blank">Nisekoi (Tình yêu giả tạo)</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life">
                         <img src="https://i.ebayimg.com/images/g/tqEAAOSw9-dl59n7/s-l400.jpg" alt="Aishiteru Game Wo Owarasetai">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/aishiteru-game-wo-owarasetai-12773" target="_blank">Aishiteru Game Wo Owarasetai</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="mystery">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpzvuAJMW9S_OgCLtr-cH4fpH2MbCl6Rx1aw&s" alt="Thám tử Conan">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/tham-tu-conan-199" target="_blank">Thám tử Conan</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
-                    <div class="anime-item" data-id="anime-1">
+                    <div class="anime-item" data-genres="romcom, school life, harem">
                         <img src="https://cdn.myanimelist.net/s/common/uploaded_files/1742856786-84af3c1957ab38e507625ea51bee7d67.jpeg" alt="Kuroiwa Medaka Ni Watashi No Kawaii Ga Tsuujinai">
                         <h3><a href="https://truyenqqgo.com/truyen-tranh/kuroiwa-medaka-ni-watashi-no-kawaii-ga-tsuujinai-11265" target="_blank">Kuroiwa Medaka Ni Watashi No Kawaii Ga Tsuujinai</a></h3>
                         <button class="add-button">Yêu thích</button>
                     </div>
                 </div>
-                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('#category-list li').forEach(function(li) {
+                    li.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const genre = this.getAttribute('data-genre').toLowerCase();
+
+                        ['.anime-item', '.ln-item'].forEach(selector => {
+                        document.querySelectorAll(selector).forEach(item => {
+                            const genres = (item.getAttribute('data-genres') || '').toLowerCase();
+                            if (genres.includes(genre)) {
+                            item.style.display = '';
+                            } 
+                            else {
+                            item.style.display = 'none';
+                            }
+                        });
+                        });
+                    });
+                    });
+            </script>
 
             </div>
             <div class="anime-section" style="margin-top: 150px;">
