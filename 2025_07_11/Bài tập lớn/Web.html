@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://i.pinimg.com/236x/a3/96/2e/a3962ed14ac3c43be31b5df6e5f905ec.jpg">
     <link rel="stylesheet" href="Web.css" >
+    
 </head>
 <body>
 
@@ -16,25 +17,9 @@
         <div style="margin: 0 auto;">
             <div class="down">
                 <button class="downButton" onclick="showNotification()">Thông báo</button>
-                <script>
-                    function showNotification() {
-                        const notification = document.createElement('div');
-                        notification.className = 'notification';
-                        notification.textContent = 'Ko có thông tin gì mới';
-                        document.body.appendChild(notification);
 
-                        setTimeout(() => {
-                            notification.classList.add('show');
-                        }, 100);
+                <script src="Notification.js"></script>
 
-                        setTimeout(() => {
-                            notification.classList.remove('show');
-                            setTimeout(() => {
-                                notification.remove();
-                            }, 300);
-                        }, 3000);
-                    }
-                </script>
             </div>
             <div class="down">
                 <button class="downButton"><a href="https://myanimelist.net/" target="_blank" style="text-decoration: none; color: aliceblue;">Tin tức</a></button>
@@ -61,26 +46,11 @@
                         <li><a href="Feedback.html" style="text-decoration: none; color: aliceblue;">Góp ý - Báo lỗi</a></li>
                     </ul>
             </div>
+
             <span><input type="text" class="search" id="searchInput" placeholder="Tối thiểu 2 ký tự" style="outline: none;" ></span>
 
-            <script>
-                document.getElementById('searchInput').addEventListener('input', function(e) {
-                    const searchTerm = e.target.value.toLowerCase();
-                    const sections = [
-                        {class: 'love-grid', items: '.love-item'},
-                        {class: 'anime-grid', items: '.anime-item'},
-                        {class: 'ln-section .scroll', items: '.ln-item'}
-                    ];
+            <script src="Search.js"></script>
 
-                    sections.forEach(section => {
-                        const items = document.querySelectorAll(`.${section.class} ${section.items}`);
-                        items.forEach(item => {
-                            const title = item.querySelector('h3').textContent.toLowerCase();
-                            item.style.display = title.includes(searchTerm) ? 'flex' : 'none';
-                        });
-                    });
-                });
-            </script>
         </div>
 
         <div class="login" style="margin-left: auto; text-align: center;">
@@ -96,7 +66,7 @@
             <button id="next" class="button2"></button>
         </div>
     </div>
-    <script language="javascript" src="Web.js"></script>
+    <script src="Wallpaper slide.js"></script>
 
 
     <div style="margin-left: 35px; margin-top: 20px; animation: appear 1.2s ease-in;">
@@ -564,28 +534,7 @@ Liệu mối quan hệ mới này có thể xóa nhòa quá khứ? Liệu mối 
                 </div>
             </div>
 
-            
-            <script>
-                document.querySelectorAll('#category-list li').forEach(function(li) {
-                    li.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const genre = this.getAttribute('data-genre').toLowerCase();
-
-                        ['.anime-item', '.ln-item'].forEach(selector => {
-                        document.querySelectorAll(selector).forEach(item => {
-                            const genres = (item.getAttribute('data-genres') || '').toLowerCase();
-                            if (genres.includes(genre)) {
-                            item.style.display = '';
-                            } 
-                            else {
-                            item.style.display = 'none';
-                            }
-                        });
-                        });
-                    });
-                    });
-            </script>
-
+            <script src="Genres filter.js"></script>
 
             </div>
             <div class="anime-section" style="margin-top: 150px;">
