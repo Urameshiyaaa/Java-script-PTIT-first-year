@@ -17,4 +17,4 @@ document.getElementById('prev').addEventListener('click', function click(){
 document.getElementById('next').addEventListener('click', function click(){
     showSlide(s + 1);
 });
-showSlide(s);
+showSlide(s)
