@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .slideshow {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide img {max-width: 100%; height: auto;}
+
+        .buttons {margin-top: 20px;}
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {background-color: #bbb;}
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <h2>Trình chiếu ảnh bằng DOM</h2>
+        <div class="slide">
+            <img src="" alt="Slide 1">
+        </div>
+        <div class="buttons">
+            <button id="prev">← Trước</button>
+            <button id="next">Sau →</button>
+        </div>
+    </div>
+    <script language="javascript" src="index.js"></script>
+    
+</body>
+</html>
