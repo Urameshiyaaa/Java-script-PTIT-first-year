@@ -1,4 +1,3 @@
-// Cộng đồng, fanpage
 const fanpage_groupList = [
   { name: "Anime - My Heart", link: "https://www.facebook.com/share/g/18xNoFDLvE/" },
   { name: "Hako - Cộng đồng độc giả Light Novel Việt Nam", link: "https://www.facebook.com/share/g/1DLjz7xbJm/" },
@@ -13,7 +12,6 @@ const fanpage_groupList = [
   { name: "...--Sẽ update thêm--...", link: "" }
 ];
 
-// Các Anime Festival quanh Hà Nội và cộng đồng Cosplay
 const festivalList = [
   {
     name: "HIMAWARI ARTIST FIESTA",
@@ -29,5 +27,25 @@ const festivalList = [
     place: "Vincom Center Phạm Ngọc Thạch",
     map: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.659022409151!2d105.82938107530039!3d21.006301080637424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad95816c146f%3A0x2490ed9e600b1009!2zVmluY29tIENlbnRlciBQaOG6oW0gTmfhu41jIFRo4bqhY2g!5e0!3m2!1svi!2s!4v1747845554660!5m2!1svi!2s" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
   },
-  // ...Thêm các festival khác tương tự...
+  {
+    name: "SUMMER DAY - YOKINATSU",
+    link: "https://www.facebook.com/share/16d1o6Yiey/",
+    date: "Chủ nhật: 08/06/2025",
+    place: "The Zei Plaza - Số 8 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.",
+    map: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.943365298237!2d105.76744427530122!3d21.03495198061594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455001a786ebd%3A0x452e81e7ec848122!2sThe%20Zei%20Plaza!5e0!3m2!1svi!2s!4v1747845987461!5m2!1svi!2s" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
+  },
+  {
+    name: "KOMI ARTIST FAIR - SPECIAL EDITION 2: POOL PARTY",
+    link: "https://www.facebook.com/share/168ytjHKNm/",
+    date: "Chủ nhật: 08/06/2025",
+    place: "Bể bơi Quan Hoa - 165 Quan Hoa, Cầu Giấy, Hà Nội.",
+    map: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0061260953203!2d105.79523467530113!3d21.032440880617774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab47273770f7%3A0xf765db772d5ae039!2zU8OibiBUZW5uaXMgLSBC4buDIGLGoWkgUXVhbiBIb2E!5e0!3m2!1svi!2s!4v1747846101094!5m2!1svi!2s" width="259" height="100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`
+  },
+  {
+    name: "Việt Phục - Lịch sử Vàng Son《ANIME COLLECTION TOUR》",
+    link: "https://www.facebook.com/share/1EYDoimML3/",
+    date: "Chủ nhật: 27/07/2025",
+    place: "xxx,xxx.",
+    map: ""
+  }
 ];
