@@ -28,20 +28,26 @@
             <div class="down">
                 <button class="downButton"><a href="https://myanimelist.net/" target="_blank" style="text-decoration: none; color: aliceblue;">Tin tức</a></button>
             </div>
+
             <div class="down">
-                
                 <button class="downButton">Thể loại</button>
-                    <ul class="down-content">
-                        <li> <a href="#" style="text-decoration: none; color: aliceblue;">Romcom</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">School life</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Slice of Life</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Shounen</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Isekai</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Mystery</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Action</a></li>
-                        <li><a href="#" style="text-decoration: none; color: aliceblue;">Harem</a></li>
-                    </ul>
+                    <ul class="down-content" id="category-list"></ul>
             </div>
+            <script src="GenreList.js"></script>
+            <script>
+                function renderCategoryList(list) {
+                    const ul = document.getElementById('category-list');
+                    ul.innerHTML = '';
+                    list.forEach(item => {
+                        const li = document.createElement('li');
+                        li.setAttribute('data-genre', item.genre);
+                        li.innerHTML = `<a href="#" style="text-decoration: none; color: aliceblue;">${item.name}</a>`;
+                        ul.appendChild(li);
+                    });
+                }
+                renderCategoryList(genreList);
+            </script>
+
             <div class="down">
                 <button class="downButton">Hướng dẫn</button>
                     <ul class="down-content">
