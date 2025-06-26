@@ -6,5 +6,5 @@ const genreList = [
   { genre: "isekai", name: "Isekai" },
   { genre: "mystery", name: "Mystery" },
   { genre: "action", name: "Action" },
-  { genre: "harem", name: "Harem" }
+  { genre: "harem", name: "Harem"}
 ];

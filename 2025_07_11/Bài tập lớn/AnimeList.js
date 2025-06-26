@@ -39,7 +39,7 @@ const animeList = [
     alt: "Bí mật tình yêu nơi công sở",
     link: "https://animevietsub.lol/phim/kono-kaisha-ni-suki-na-hito-ga-imasu-a5515/",
     name: "Kono Kaisha ni Suki na Hito ga Imasu (Bí mật tình yêu nơi công sở)",
-    genres: "action, shounen"
+    genres: "romcom"
   },
   {
     img: "https://m.media-amazon.com/images/M/MV5BZjc4ZGZkNjMtZTRkYS00Mjk4LTgwMzAtMzg1MWZlZjcxNDRhXkEyXkFqcGc@._V1_.jpg",
