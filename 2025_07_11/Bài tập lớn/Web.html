@@ -37,17 +37,18 @@
             </div>
             <script src="GenreList.js"></script>
             <script>
-                function renderCategoryList(list) {
-                    const ul = document.getElementById('category-list');
-                    ul.innerHTML = '';
-                    list.forEach(item => {
-                        const li = document.createElement('li');
-                        li.setAttribute('data-genre', item.genre);
-                        li.innerHTML = `<a href="#" style="text-decoration: none; color: aliceblue;">${item.name}</a>`;
-                        ul.appendChild(li);
-                    });
+                function repeatGenreList(a) {
+                    const b = document.getElementById('category-list')
+                    b.innerHTML = ''
+
+                    a.forEach( genre => {
+                        const li = document.createElement('li')
+                        li.setAttribute('data-genre', genre.genre)
+                        li.innerHTML = `<a href="#" style="text-decoration: none; color: aliceblue;">${genre.name}</a>`
+                        b.appendChild(li)
+                    })
                 }
-                renderCategoryList(genreList);
+                repeatGenreList(genreList)
             </script>
 
 
@@ -101,22 +102,22 @@
             </div>
             <script src="AnimeList.js"></script>
             <script>
-                function renderAnimeList(list) {
-                const container = document.querySelector('.anime-section .anime-grid');
-                container.innerHTML = '';
-                list.forEach(anime => {
-                    const div = document.createElement('div');
-                    div.className = 'anime-item';
-                    div.setAttribute('data-genres', anime.genres);
+                function repeatAnimeList(a) {
+                const b = document.querySelector('.anime-section .anime-grid')
+                b.innerHTML = ''
+
+                a.forEach( anime => {
+                    const div = document.createElement('div')
+                    div.className = 'anime-item'
+                    div.setAttribute('data-genres', anime.genres)
                     div.innerHTML = `
-                    <img src="${anime.img}" alt="${anime.alt}">
-                    <h3><a href="${anime.link}" target="_blank">${anime.name}</a></h3>
-                    <button class="add-button">Yêu thích</button>
-                    `;
-                    container.appendChild(div);
-                });
+                    <img src="${anime.img}" alt='${anime.alt}'>
+                    <h3><a href='${anime.link} target='_blank'>${anime.name}</a></h3>
+                    <button class='add-button'>Yêu thích</button>`
+                    b.appendChild(div)
+                    })
                 }
-                renderAnimeList(animeList);
+                repeatAnimeList(animeList)
             </script>
 
 
@@ -127,26 +128,26 @@
         </div>
         <script src="LightnovelList.js"></script>
         <script>
-            function renderLnList(list) {
-            const container = document.querySelector('.ln-section .scroll');
-            container.innerHTML = '';
-            list.forEach(ln => {
-                const div = document.createElement('div');
-                div.className = 'ln-item';
-                div.setAttribute('data-genres', ln.genres);
-                div.innerHTML = `
-                <img src="${ln.img}" alt="${ln.alt}">
-                <div>
-                    <h3 class="hov_name">${ln.name}
-                    <div class="more">${ln.more}</div>
-                    </h3>
-                    <button class="add-button">Yêu thích</button>
-                </div>
-                `;
-                container.appendChild(div);
-            });
+            function repeatLnList(a) {
+                const b = document.querySelector('.ln-section .scroll')
+                b.innerHTML = ''
+
+                a.forEach( ln => {
+                    const div = document.createElement('div')
+                    div.className = 'ln-item'
+                    div.setAttribute('data-genres', ln.genres)
+                    div.innerHTML = `
+                    <img src="${ln.img}" alt='${ln.alt}'>
+                    <div>
+                        <h3 class='hov_name'>
+                            ${ln.name}<div class='more'>${ln.more}</div>
+                        </h3>
+                        <button class='add-button'>Yêu thích</button>
+                    </div>`
+                    b.appendChild(div)
+                })
             }
-            renderLnList(lnList);
+            repeatLnList(lnList)
         </script>
 
 
@@ -168,22 +169,22 @@
             </div>
             <script src="MangaList.js"></script>
             <script>
-                function renderMangaList(list) {
-                const container = document.querySelector('.manga-section .manga-grid');
-                container.innerHTML = '';
-                list.forEach(manga => {
-                    const div = document.createElement('div');
-                    div.className = 'anime-item';
-                    div.setAttribute('data-genres', manga.genres);
+                function repeatMangaList(a) {
+                const b = document.querySelector('.manga-section .manga-grid')
+                b.innerHTML = ''
+
+                a.forEach( manga => {
+                    const div = document.createElement('div')
+                    div.className = 'anime-item'
+                    div.setAttribute('data-genres', manga.genres)
                     div.innerHTML = `
-                    <img src="${manga.img}" alt="${manga.alt}">
-                    <h3><a href="${manga.link}" target="_blank">${manga.name}</a></h3>
-                    <button class="add-button">Yêu thích</button>
-                    `;
-                    container.appendChild(div);
-                });
+                    <img src="${manga.img}" alt='${manga.alt}'>
+                    <h3><a href='${manga.link} target='_blank'>${manga.name}</a></h3>
+                    <button class='add-button'>Yêu thích</button>`
+                    b.appendChild(div)
+                    })
                 }
-                renderMangaList(mangaList);
+                repeatMangaList(mangaList)
             </script>
 
             
@@ -229,33 +230,38 @@
     </div>
     <script src="MoreInfo.js"></script>
     <script>
-        function renderCommunity(list) {
-        const ul = document.getElementById('fanpage-group');
-        ul.innerHTML = '';
-        list.forEach(item => {
-            const li = document.createElement('li');
-            if(item.link) {
-            li.innerHTML = `<a href="${item.link}" target="_blank" class="none">${item.name}</a>`;
-            } else {
-            li.innerHTML = `<a href="#" style="text-decoration: none; color: rgb(65, 119, 119);">${item.name}</a>`;
+        function repeatCommunity(a) {
+        const b = document.getElementById('fanpage-group')
+        b.innerHTML = ''
+
+        a.forEach( fp => {
+            const li = document.createElement('li')
+            if (fp.link) {
+                li.innerHTML = `<a href="${fp.link}" target="_blank" class="none">${fp.name}</a>`
+            } 
+            else {
+                li.innerHTML = `<a href="#" style="text-decoration: none; color: rgb(65, 119, 119);">${fp.name}</a>`;
             }
-            ul.appendChild(li);
+            b.appendChild(li);
         });
         }
-        function renderFestival(list) {
-        const ul = document.getElementById('festival');
-        ul.innerHTML = '';
-        list.forEach(item => {
+
+        function repeatFestival(a) {
+        const b = document.getElementById('festival')
+        b.innerHTML = ''
+
+        a.forEach( fes => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="${item.link}" class="none" target="_blank">${item.name}</a><br>
-            ${item.date}<br>
-            Địa điểm: ${item.place}<br>
-            ${item.map || ''}`;
-            ul.appendChild(li);
-        });
+            li.innerHTML = `
+                <a href="${fes.link}" class="none" target="_blank">${fes.name}</a><br>
+                ${fes.date}<br>
+                Địa điểm: ${fes.place}<br>
+                ${fes.map}`
+            b.appendChild(li)
+        })
         }
-        renderCommunity(fanpage_groupList);
-        renderFestival(festivalList);
+        repeatCommunity(fanpage_groupList)
+        repeatFestival(festivalList)
     </script>
 
     

@@ -17,6 +17,6 @@ x.addEventListener('input', function(a){
             else{
                 item.style.display = 'none'
             }
-        });
-    });
-});
+        })
+    })
+})
