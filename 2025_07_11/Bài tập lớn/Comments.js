@@ -1,16 +1,20 @@
-let comments = JSON.parse(localStorage.getItem('comments')) || [];
-
+let a = localStorage.getItem('comments')
+if (a){
+    comments = JSON.parse(a)
+}
+else{
+    comments = []
+}
 function postComment() {
-    const commentInput = document.getElementById('cmtInput');
-    const commentText = commentInput.value.trim();
-
+    const commentInput = document.getElementById('cmtInput')
+    const commentText = commentInput.value.trim()
     if (commentText === '') {
-        alert('Vui lòng nhập nội dung bình luận!');
-        return;
+        alert('Hãy nhập nội dung bình luận!')
+        return
     }
 
     const newComment = {
-        id: Date.now(),
+        id: '',
         username: 'Người dùng ẩn danh',
         text: commentText,
         time: new Date().toLocaleString('vi-VN', { 
@@ -20,11 +24,11 @@ function postComment() {
             hour: '2-digit', 
             minute: '2-digit' 
         })
-    };
-    comments.push(newComment);
-    localStorage.setItem('comments', JSON.stringify(comments));
-    commentInput.value = '';
-    renderComments();
+    }
+    comments.push(newComment)
+    localStorage.setItem('comments', JSON.stringify(comments))
+    commentInput.value = ''
+    renderComments()
 }
 
 function deleteComment(id) {
