@@ -5,19 +5,18 @@ if (a){
 else{
     comments = []
 }
-
 function postComment() {
-    const cmtInput = document.getElementById('cmtInput')
-    const cmtText = cmtInput.value.trim()
-    if (cmtText === '') {
+    const commentInput = document.getElementById('cmtInput')
+    const commentText = commentInput.value.trim()
+    if (commentText === '') {
         alert('Hãy nhập nội dung bình luận!')
         return
     }
 
-    const newCmt = {
-        id: '',
+    const newComment = {
+        id: Date.now().toString(),
         username: 'Người dùng ẩn danh',
-        text: cmtText,
+        text: commentText,
         time: new Date().toLocaleString('vi-VN', { 
             day: '2-digit', 
             month: '2-digit', 
@@ -26,9 +25,9 @@ function postComment() {
             minute: '2-digit' 
         })
     }
-    comments.push(newCmt)
+    comments.push(newComment)
     localStorage.setItem('comments', JSON.stringify(comments))
-    cmtInput.value = ''
+    commentInput.value = ''
     displayComments()
 }
 
@@ -45,7 +44,7 @@ function displayComments() {
                 <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
                 <span class="username">${cmt.username}</span>
                 <span class="time">${cmt.time}</span>
-                <button class="delete-bt" onclick="deleteComment(${cmt.id})">Xóa</button>
+                <button class="delete-bt" onclick="deleteComment('${cmt.id}')">Xóa</button>
             </div>
             <div class="post-content">${cmt.text}</div>`
         cmtList.appendChild(createCmt)
@@ -54,22 +53,9 @@ function displayComments() {
 document.addEventListener('DOMContentLoaded', displayComments)
 
 function deleteComment(id) {
-    comments = comments.filter( function(comment) { 
-        return comment.id !== id
+    comments = comments.filter( function(cmt) { 
+        return cmt.id !== id
     })
     localStorage.setItem('comments', JSON.stringify(comments))
     displayComments()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
