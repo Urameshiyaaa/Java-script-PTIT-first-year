@@ -5,18 +5,19 @@ if (a){
 else{
     comments = []
 }
+
 function postComment() {
-    const commentInput = document.getElementById('cmtInput')
-    const commentText = commentInput.value.trim()
-    if (commentText === '') {
+    const cmtInput = document.getElementById('cmtInput')
+    const cmtText = cmtInput.value.trim()
+    if (cmtText === '') {
         alert('Hãy nhập nội dung bình luận!')
         return
     }
 
-    const newComment = {
+    const newCmt = {
         id: '',
         username: 'Người dùng ẩn danh',
-        text: commentText,
+        text: cmtText,
         time: new Date().toLocaleString('vi-VN', { 
             day: '2-digit', 
             month: '2-digit', 
@@ -25,39 +26,42 @@ function postComment() {
             minute: '2-digit' 
         })
     }
-    comments.push(newComment)
+    comments.push(newCmt)
     localStorage.setItem('comments', JSON.stringify(comments))
-    commentInput.value = ''
-    renderComments()
+    cmtInput.value = ''
+    displayComments()
 }
 
-function deleteComment(id) {
-    comments = comments.filter(comment => comment.id !== id);
-    localStorage.setItem('comments', JSON.stringify(comments));
-    renderComments();
-}
+function displayComments() {
+    const cmtList = document.getElementById('commentList')
+    cmtList.innerHTML = ''
 
-function renderComments() {
-    const commentList = document.getElementById('commentList');
-    commentList.innerHTML = '';
-
-    comments.forEach(comment => {
-        const commentElement = document.createElement('div');
-        commentElement.className = 'post';
-        commentElement.style.marginTop = '10px';
-        commentElement.innerHTML = `
+    comments.forEach( cmt => {
+        const createCmt = document.createElement('div')
+        createCmt.className = 'post'
+        createCmt.style.marginTop = '10px'
+        createCmt.innerHTML = `
             <div class="post-header">
                 <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
-                <span class="username">${comment.username}</span>
-                <span class="time">${comment.time}</span>
-                <button class="delete-bt" onclick="deleteComment(${comment.id})">Xóa</button>
+                <span class="username">${cmt.username}</span>
+                <span class="time">${cmt.time}</span>
+                <button class="delete-bt" onclick="deleteComment(${cmt.id})">Xóa</button>
             </div>
-            <div class="post-content">${comment.text}</div>
-        `;
-        commentList.appendChild(commentElement);
-    });
+            <div class="post-content">${cmt.text}</div>`
+        cmtList.appendChild(createCmt)
+    })
 }
-document.addEventListener('DOMContentLoaded', renderComments);
+document.addEventListener('DOMContentLoaded', displayComments)
+
+function deleteComment(id) {
+    comments = comments.filter( function(comment) { 
+        return comment.id !== id
+    })
+    localStorage.setItem('comments', JSON.stringify(comments))
+    displayComments()
+}
+
+
 
 
 
