@@ -21,19 +21,19 @@ function Information(item) {
 
 
 function statusButtons() {
-    const favs = jsFavorites()
+    const calljsF = jsFavorites()
     document.querySelectorAll('.add-button').forEach( bt => {
         const item = bt.closest('.anime-item, .ln-item')
         const info = Information(item)
         
-        const existFav = favs.some( fav => fav.name === info.name && fav.type === info.type)
-        if (existFav) {
+        const existFavorite = calljsF.some( favorite => favorite.name === info.name && favorite.type === info.type)
+        if (existFavorite) {
             bt.textContent = 'Gỡ'
-            bt.classList.add('remove-fav')
+            bt.classList.add('remove')
         } 
         else {
             bt.textContent = 'Yêu thích'
-            bt.classList.remove('remove-fav')
+            bt.classList.remove('remove')
         }
     })
 }
@@ -41,20 +41,20 @@ function statusButtons() {
 
 document.addEventListener('click', function(b) {
     if (b.target.classList.contains('add-button')) {
-        const btn = b.target
-        const item = btn.closest('.anime-item, .ln-item')
+        const item = b.target.closest('.anime-item, .ln-item')
         const info = Information(item)
 
-        let favs = jsFavorites()
-        const position = favs.findIndex( fav => fav.name === info.name && fav.type === info.type)
+        let calljsF = jsFavorites()
+        const position = calljsF.findIndex( favorite => favorite.name === info.name && favorite.type === info.type)
         if (position !== -1) {
-            favs.splice(position, 1)
+            calljsF.splice(position, 1)
         } 
         else{
-            favs.push(info)
+            calljsF.push(info)
         }
-        jsonFavorites(favs)
+        jsonFavorites(calljsF)
         statusButtons()
     }
 })
+
 document.addEventListener('DOMContentLoaded', statusButtons)
