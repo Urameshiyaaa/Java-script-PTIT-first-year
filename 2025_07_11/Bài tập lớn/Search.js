@@ -12,7 +12,7 @@ x.addEventListener('input', function(a){
         b.forEach( item => {
             const title = item.querySelector('h3').textContent.toLowerCase()
             if (title.includes(searchWord)) {
-                item.style.display = 'flex'
+                item.style.display = ''
             }
             else{
                 item.style.display = 'none'

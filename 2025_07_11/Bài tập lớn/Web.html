@@ -14,7 +14,7 @@
         <div class="logo" style="margin-right: 20px;"><button onclick="reload()" style="background-color: transparent; border: none;"><img src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T638A2PA1304PT32X35Y36D187145441W17994H3947/views/2,width=550,height=200,appearanceId=2,backgroundColor=000000,noPt=true/anime-logo-sporttasche.jpg" width="120"></button></div>
             <script>
                 function reload(){
-                    window.location.reload();
+                    window.location.reload()
                 }
             </script>
 
@@ -104,7 +104,7 @@
             <script>
                 function repeatAnimeList(a) {
                 const b = document.querySelector('.anime-section .anime-grid')
-                b.innerHTML = ''
+                b.innerHTML = '' 
 
                 a.forEach( anime => {
                     const div = document.createElement('div')
@@ -194,7 +194,7 @@
             <div class="anime-section" style="margin-top: 150px;">
                 <h2 id="other">Nhạc Nhật</h2>
                 <iframe width="330" height="220" 
-                src="https://www.youtube-nocookie.com/embed/In25SyYTpQs?si=KZCzN9xlT2X2RUf1" 
+                src="https://www.youtube.com/embed/WkGgD_RF5V8?si=3yicdtCj3TPOddRp" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -239,10 +239,10 @@
                 li.innerHTML = `<a href="${fp.link}" target="_blank" class="none">${fp.name}</a>`
             } 
             else {
-                li.innerHTML = `<a href="#" style="text-decoration: none; color: rgb(65, 119, 119);">${fp.name}</a>`;
+                li.innerHTML = `<a href="#" style="text-decoration: none; color: rgb(65, 119, 119);">${fp.name}</a>`
             }
-            b.appendChild(li);
-        });
+            b.appendChild(li)
+        })
         }
 
         function repeatFestival(a) {

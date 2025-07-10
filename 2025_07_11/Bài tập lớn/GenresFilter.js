@@ -1,7 +1,7 @@
 x = document.querySelectorAll('#category-list li')
 x.forEach( function(li){
     li.addEventListener('click', function(a){
-        const genres = this.getAttribute('data-genre').toLowerCase()
+        const genres = li.getAttribute('data-genre').toLowerCase()
 
         b = ['.anime-item', '.ln-item']
         b.forEach( items => {
