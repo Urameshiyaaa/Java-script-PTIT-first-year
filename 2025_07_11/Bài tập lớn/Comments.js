@@ -14,7 +14,7 @@ function postComment() {
     }
 
     const newComment = {
-        id: Date.now().toString(),
+        id: Date.now(),
         username: 'Người dùng ẩn danh',
         text: commentText,
         time: new Date().toLocaleString('vi-VN', { 
@@ -44,9 +44,9 @@ function displayComments() {
                 <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
                 <span class="username">${cmt.username}</span>
                 <span class="time">${cmt.time}</span>
-                <button class="delete-bt" onclick="deleteComment('${cmt.id}')">Xóa</button>
+                <button class="delete-bt" onclick="deleteComment(${cmt.id})">Xóa</button>
             </div>
-            <div class="post-content">${cmt.text}</div>`
+            <div class="post-content"><pre>${cmt.text}</pre></div>`
         cmtList.appendChild(createCmt)
     })
 }

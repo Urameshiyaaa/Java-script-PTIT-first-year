@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="https://i.pinimg.com/236x/a3/96/2e/a3962ed14ac3c43be31b5df6e5f905ec.jpg">
     <link rel="stylesheet" href="Feedback.css">
 </head>
-<body>
+<body oncontextmenu="return false">
     <div class="start">
         <div class="logo" style="margin-right: 20px;"><button onclick="reload()" style="background-color: transparent; border: none;"><img src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T638A2PA1304PT32X35Y36D187145441W17994H3947/views/2,width=550,height=200,appearanceId=2,backgroundColor=000000,noPt=true/anime-logo-sporttasche.jpg" width="120"></button></div>
         <script>
@@ -110,7 +110,7 @@ P/s: À, chỗ này các bạn cũng có thể dùng để thảo luận đượ
         <div class="cmt-container">
             <div class="cmt-section">
                 <div class="cmt-box">
-                    <input type="text" class="cmt-input" id="cmtInput" placeholder="P">
+                    <textarea type="text" class="cmt-input" id="cmtInput" placeholder="P" ></textarea>
                     <button class="submit-bt" onclick="postComment()">Đăng bình luận</button>
                 </div>
                 <div id="commentList" class="scroll"></div>

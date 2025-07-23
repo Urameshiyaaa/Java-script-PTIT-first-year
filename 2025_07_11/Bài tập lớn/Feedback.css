@@ -222,3 +222,9 @@ body {
     background-color: #434343;
     padding: 33px;
 }
+
+textarea {
+    &::-webkit-scrollbar {width: 0;}
+    &::-webkit-scrollbar-track {background:transparent;}
+    &::-webkit-scrollbar-thumb {background: transparent;}
+}
